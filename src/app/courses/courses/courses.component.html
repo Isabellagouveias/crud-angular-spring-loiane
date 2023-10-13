@@ -1,11 +1,13 @@
 <mat-card>
   <mat-toolbar color="primary"> Cursos Disponíveis </mat-toolbar>
+
   <table mat-table [dataSource]="courses" class="mat-elevation-z8">
+    <!--Name column-->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Curso</th>
       <td mat-cell *matCellDef="let course">{{ course.name }}</td>
     </ng-container>
-
+    <!--Category column-->
     <ng-container matColumnDef="category">
       <th mat-header-cell *matHeaderCellDef>Categoria</th>
       <td mat-cell *matCellDef="let course">{{ course.category }}</td>
